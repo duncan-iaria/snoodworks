@@ -14,6 +14,7 @@ namespace SNDL
 
 		protected virtual void Start()
 		{
+			Debug.Log( levelName + " level has started" );
 		}
 	}
 }
