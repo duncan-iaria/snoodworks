@@ -1,4 +1,6 @@
 Snoodworks/Library
 Snoodworks/Temp
-Snoodworks/Snoodworks.sln
 Snoodworks/*.csproj
+Snoodworks/Snoodworks.sln
+*/**.sln
+*.sln
