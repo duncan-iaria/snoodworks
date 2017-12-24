@@ -4,3 +4,4 @@ Snoodworks/*.csproj
 Snoodworks/Snoodworks.sln
 */**.sln
 *.sln
+*.DS_Store
