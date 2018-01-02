@@ -58,14 +58,14 @@ namespace SNDL
 			_instance.name = gameName;
 
 			//load GUI scene and other required scenes
-			initGUI();
+			initGui();
 
 			//load View and set it up
 			initView();
 		}
 
 		//GUI INIT
-		protected virtual void initGUI()
+		protected virtual void initGui()
 		{
 			if( GUI != null )
 			{

@@ -87,8 +87,8 @@ MonoBehaviour:
   controller: {fileID: 114494703693039338}
   leftAxisHorizontal: Horizontal
   leftAxisVertical: Vertical
-  rightAxisHorizontal: RHorizontal
-  rightAxisVertical: RVertical
+  rightAxisHorizontal: Right Horizontal
+  rightAxisVertical: Right Vertical
   cancelButton: Cancel
   pauseButton: Pause
   cycleButton: Cycle

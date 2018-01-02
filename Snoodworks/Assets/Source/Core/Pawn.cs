@@ -57,15 +57,14 @@ namespace SNDL
 		public virtual void onJump()
 		{ }
 
-		public virtual void onJump( float jumpStr )
+		public virtual void onJump( float tJumpStrength )
 		{ }
 
 		public virtual void onCancel()
 		{ }
 
 		public virtual void onPause()
-		{
-		}
+		{ }
 
 		public virtual void onLeftAxis()
 		{ }

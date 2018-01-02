@@ -19,8 +19,8 @@ namespace SNDL
 		[Header( "Axes" )]
 		public string leftAxisHorizontal = "Horizontal";
 		public string leftAxisVertical = "Vertical";
-		public string rightAxisHorizontal = "RHorizontal";
-		public string rightAxisVertical = "RVertical";
+		public string rightAxisHorizontal = "Right Horizontal";
+		public string rightAxisVertical = "Right Vertical";
 
 		[Header( "Buttons" )]
 		public string cancelButton = "Cancel";
@@ -91,7 +91,7 @@ namespace SNDL
 		//pass in the reference so that hopefully the data is persistent 
 		protected virtual float handleAxis( string tAxisName, ref float tPrevious )
 		{
-			float tempAxis = Input.GetAxis( tAxisName );
+			float tempAxis = Input.GetAxis( tAxisName ); 
 
 			if( tempAxis != tPrevious )
 			{

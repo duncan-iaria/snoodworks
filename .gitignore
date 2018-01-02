@@ -2,6 +2,7 @@ Snoodworks/Library
 Snoodworks/Temp
 Snoodworks/*.csproj
 Snoodworks/Snoodworks.sln
+Snoodworks/.vs
 *.sln
 */**.sln
 */**.suo
