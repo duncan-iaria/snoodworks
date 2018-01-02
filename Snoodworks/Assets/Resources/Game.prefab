@@ -20,8 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4819121250228570}
   - component: {fileID: 114139072166273950}
-  - component: {fileID: 114767463669314088}
-  - component: {fileID: 114108693484439938}
   - component: {fileID: 114494703693039338}
   - component: {fileID: 114156825735753166}
   m_Layer: 0
@@ -44,19 +42,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114108693484439938
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1086831711984834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 937f3ef98a023ad46a8c371273faf43b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  currentTarget: {fileID: 0}
 --- !u!114 &114139072166273950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,8 +54,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameName: TestGame
-  GUI: {fileID: 114767463669314088}
-  view: {fileID: 114108693484439938}
+  GUI: {fileID: 114393439716823786, guid: 3883ca1f5be73ca44a396a58bac4a05b, type: 2}
+  view: {fileID: 114873554355645594, guid: 5c7a8668f00068947a98606da4a1536e, type: 2}
   controller: {fileID: 114494703693039338}
   inputter: {fileID: 114156825735753166}
 --- !u!114 &114156825735753166
@@ -106,14 +91,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPawn: {fileID: 0}
---- !u!114 &114767463669314088
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1086831711984834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fa3b7eb3596109499588e34006e9007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
