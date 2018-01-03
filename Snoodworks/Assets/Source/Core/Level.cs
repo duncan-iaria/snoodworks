@@ -22,7 +22,7 @@ namespace SNDL
 			if( defaultPawn )
 			{
 				setDefaultPawn( defaultPawn );
-				setDefaultViewTarget( defaultPawn.GetComponent<Transform>() );
+				setDefaultViewTarget( defaultPawn.transform );
 			}
 		}
 

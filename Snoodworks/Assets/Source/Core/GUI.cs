@@ -5,6 +5,16 @@ namespace SNDL
 {
 	public class GUI : MonoBehaviour
 	{
+		protected Game game;
+
+		//=======================
+		// Intialization
+		//=======================
+		protected virtual void Awake()
+		{
+			game = Game.GetGame<Game>();
+		}
+
 		//=======================
 		// Main Menu
 		//=======================
@@ -23,8 +33,9 @@ namespace SNDL
 		//=======================
 		// Scene Loading
 		//=======================
-		public virtual void onLoadScene( int _sceneIndex )
+		public virtual void onLoadScene( int tSceneIndex )
 		{
+			game.onLoadLevel( tSceneIndex );
 		}
 
 		protected virtual void onSceneLoaded( Scene _scene, LoadSceneMode _mode )

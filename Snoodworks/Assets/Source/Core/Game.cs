@@ -22,7 +22,8 @@ namespace SNDL
 		public Controller controller;
 		public Inputter inputter;
 
-		//protected GMGame gamePrefab;
+		//internal vars
+		protected int _levelToLoad;
 		protected static Game _instance;
 
 		//=======================
@@ -145,6 +146,26 @@ namespace SNDL
 		//=======================
 		// Level Loading
 		//=======================
+		public virtual void onLoadLevel( int tIndex, float tTransitionDuration = 0, bool isUsingTrasition = false )
+		{
+			//set the level to be loaded next(because we can't set with invoke)
+			_levelToLoad = tIndex;
+
+			//game load level function to execute when the closing transition is complete
+			Invoke( "loadLevel", tTransitionDuration );
+
+			if( isUsingTrasition )
+			{
+				//TODO transition logic here
+			}
+		}
+
+		protected virtual void loadLevel()
+		{
+			SceneManager.LoadScene( _levelToLoad );
+		}
+
+		// ON SCENE LOADED SUCCESS
 		protected virtual void onSceneLoaded( Scene _scene, LoadSceneMode _mode )
 		{
 		}
