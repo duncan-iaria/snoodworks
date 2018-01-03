@@ -18,9 +18,11 @@ namespace SNDL
 		protected virtual void Start()
 		{
 			Debug.Log( levelName + " level has started" );
+
 			if( defaultPawn )
 			{
 				setDefaultPawn( defaultPawn );
+				setDefaultViewTarget( defaultPawn.GetComponent<Transform>() );
 			}
 		}
 
@@ -29,6 +31,12 @@ namespace SNDL
 		protected virtual void setDefaultPawn( Pawn tPawn )
 		{
 			game.controller.setCurrentPawn( tPawn );
+		}
+
+		// SET THE DEFAULT VIEW TARGET WHEN THE LEVEL LOADS
+		protected virtual void setDefaultViewTarget( Transform tTransform )
+		{
+			game.view.setTarget( tTransform );
 		}
 	}
 }
