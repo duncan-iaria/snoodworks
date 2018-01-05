@@ -1,5 +1,5 @@
 # Snoodworks
-## A super simple game framework meant fo extension
+## A super simple game framework meant for extension
 ### Perfect for game jams? Maybe so, maybe no!
 
 ## Usage
