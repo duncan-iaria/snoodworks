@@ -156,6 +156,7 @@ namespace SNDL
 
 			if( isUsingTrasition )
 			{
+				GUI.startTransition();
 				//TODO transition logic here
 			}
 		}

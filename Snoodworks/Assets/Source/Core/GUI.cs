@@ -5,6 +5,10 @@ namespace SNDL
 {
 	public class GUI : MonoBehaviour
 	{
+		[ Header( "Transitions" ) ]
+		public GUITransition guiTransition;
+		public float transitionDuration = 0.5f;
+
 		protected Game game;
 
 		//=======================
@@ -35,11 +39,17 @@ namespace SNDL
 		//=======================
 		public virtual void onLoadScene( int tSceneIndex )
 		{
-			game.onLoadLevel( tSceneIndex );
+			game.onLoadLevel( tSceneIndex, transitionDuration, true );
+		}
+
+		public virtual void startTransition()
+		{
+			guiTransition.startTransition();
 		}
 
 		protected virtual void onSceneLoaded( Scene _scene, LoadSceneMode _mode )
 		{
+			guiTransition.endTransition();
 		}
 
 		//=======================
