@@ -1,15 +1,10 @@
-﻿using System;
-
-namespace SNDL
+﻿namespace SNDL
 {
-	//##########################
-	// Enum Declaration
-	//##########################
-	public enum InputAxis
-	{
-		Vertical,
-		Horizontal,
-		RightVertical,
-		RightHorizontal,
-	}
+  public enum InputAxis
+  {
+    Vertical,
+    Horizontal,
+    RightVertical,
+    RightHorizontal,
+  }
 }
