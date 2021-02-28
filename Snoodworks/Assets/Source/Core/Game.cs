@@ -23,7 +23,8 @@ namespace SNDL
 
     public Level currentLevel;
 
-    protected int _levelToLoad;
+    protected int _levelToLoadIndex;
+    protected string _levelToLoadName;
     protected static Game _instance;
 
     //=======================
@@ -144,13 +145,13 @@ namespace SNDL
     //=======================
     // Level Loading
     //=======================
-    public virtual void onLoadLevel(int tIndex, float tTransitionDuration = 0, bool isUsingTrasition = false)
+    public virtual void loadLevel(int tIndex, float tTransitionDuration = 0, bool isUsingTrasition = false)
     {
       //set the level to be loaded next(because we can't set with invoke)
-      _levelToLoad = tIndex;
+      _levelToLoadIndex = tIndex;
 
       //game load level function to execute when the closing transition is complete
-      Invoke("loadLevel", tTransitionDuration);
+      Invoke("onLoadLevelByIndex", tTransitionDuration);
 
       if (isUsingTrasition)
       {
@@ -164,14 +165,54 @@ namespace SNDL
       }
     }
 
-    protected virtual void loadLevel()
+    protected virtual void onLoadLevelByIndex()
     {
       if (currentLevel)
       {
         currentLevel.onLevelUnloaded();
       }
 
-      SceneManager.LoadScene(_levelToLoad);
+      SceneManager.LoadScene(_levelToLoadIndex);
+    }
+
+    public virtual void loadLevel(string tLevelName, float tTransitionDuration = 0, bool isUsingTrasition = false)
+    {
+      // TODO verify that level name is in the GameLevel runtime set!
+
+      //set the level to be loaded next(because we can't set with invoke)
+      _levelToLoadName = tLevelName;
+
+      //game load level function to execute when the closing transition is complete
+      Invoke("onLoadLevelByName", tTransitionDuration);
+
+      if (isUsingTrasition)
+      {
+        gui.startTransition();
+        //TODO transition logic here
+      }
+
+      if (currentLevel)
+      {
+        currentLevel.onLevelEnd();
+      }
+    }
+
+    public virtual void loadNextLevel()
+    {
+      _levelToLoadName = currentLevel.levelData.defaultNextLevel.levelName;
+      gui.startTransition();
+
+      Invoke("onLoadLevelByName", .5f);
+    }
+
+    protected virtual void onLoadLevelByName()
+    {
+      if (currentLevel)
+      {
+        currentLevel.onLevelUnloaded();
+      }
+
+      SceneManager.LoadScene(_levelToLoadName);
     }
 
     // ON SCENE LOADED SUCCESS

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 114139072166273950}
   - component: {fileID: 114494703693039338}
   - component: {fileID: 114156825735753166}
+  - component: {fileID: -7037524875517357766}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MonoBehaviour:
   view: {fileID: 114873554355645594, guid: 5c7a8668f00068947a98606da4a1536e, type: 3}
   controller: {fileID: 114494703693039338}
   inputter: {fileID: 114156825735753166}
+  currentLevel: {fileID: 0}
 --- !u!114 &114494703693039338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,3 +87,31 @@ MonoBehaviour:
   cycleButton: Cycle
   acceptButton: Dummy
   menuButton: Dummy
+--- !u!114 &-7037524875517357766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086831711984834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 315a87d05386cb240b1b8870c65783a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: cf1a216bfa9df144598238a12dd74a9e, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114139072166273950}
+        m_TargetAssemblyTypeName: SNDL.Game, Assembly-CSharp
+        m_MethodName: loadNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

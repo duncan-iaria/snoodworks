@@ -37,10 +37,10 @@ namespace SNDL
     //=======================
     // Scene Loading
     //=======================
-    public virtual void onLoadScene(int tSceneIndex)
-    {
-      game.onLoadLevel(tSceneIndex, levelTransitionDuration, true);
-    }
+    // public virtual void onLoadScene(int tSceneIndex)
+    // {
+    //   game.onLoadLevel(tSceneIndex, levelTransitionDuration, true);
+    // }
 
     public virtual void startTransition()
     {

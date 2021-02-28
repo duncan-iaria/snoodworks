@@ -316,7 +316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223d7dd71a3fa4b4ab468ee44edcdd16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: Test Level 02
+  levelData: {fileID: 11400000, guid: 54b1a4dbdebe31845af87d3b2cceaaa3, type: 2}
+  levelUi: {fileID: 0}
   defaultPawn: {fileID: 0}
 --- !u!4 &1323188762
 Transform:
